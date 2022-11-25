@@ -1,0 +1,490 @@
+INFO - 07/26/22 19:42:19 - 0:00:00 - ============ Initialized logger ============
+INFO - 07/26/22 19:42:19 - 0:00:00 - NGPU: 1
+                                     attention_dropout: 0
+                                     batch_size: 2048
+                                     clip_grad_norm: 5
+                                     command: python /public/home/pw/workspace/LearnLawsInMatrix/main.py --exp_id "SMD_8_7_200000"
+                                     cpu: False
+                                     dropout: 0
+                                     dump_path: /public/home/pw/workspace/LearnLawsInMatrix/eval_log/MIS/SMD_8_7_200000
+                                     emb_dim: 256
+                                     env_base_seed: 0
+                                     epoch_size: 80000
+                                     eval_only: True
+                                     exp_id: SMD_8_7_200000
+                                     exp_name: MIS
+                                     gen_only: False
+                                     global_rank: 0
+                                     is_master: True
+                                     local_rank: 0
+                                     master_port: -1
+                                     max_epoch: 200000
+                                     multi_gpu: False
+                                     multi_node: False
+                                     n_dec_layers: 6
+                                     n_enc_layers: 6
+                                     n_gpu_per_node: 1
+                                     n_heads: 8
+                                     n_nodes: 1
+                                     node_id: 0
+                                     num_workers: 0
+                                     optimizer: adam,lr=0.0001
+                                     reload_checkpoint: 
+                                     reload_data:  ,/public/home/pw/workspace/LearnLawsInMatrix/dataset/eva/MIS/MIS_7_200000.test
+                                     reload_model: /public/home/pw/workspace/LearnLawsInMatrix/dumped/MIS_8_200000_SMD_256d/0zl038v6io/best-test_acc.pth
+                                     reload_size: -1
+                                     share_inout_emb: True
+                                     sinusoidal_embeddings: False
+                                     sorting_type: SMD
+                                     stopping_criterion: test_acc,200
+                                     task: MIS
+                                     validation_metrics: test_acc
+                                     world_size: 1
+INFO - 07/26/22 19:42:19 - 0:00:00 - The experiment will be stored in /public/home/pw/workspace/LearnLawsInMatrix/eval_log/MIS/SMD_8_7_200000
+                                     
+INFO - 07/26/22 19:42:19 - 0:00:00 - Running command: python /public/home/pw/workspace/LearnLawsInMatrix/main.py
+
+INFO - 07/26/22 19:42:19 - 0:00:00 - word2id: {'<s>': 0, '</s>': 1, '<pad>': 2, '0': 3, '1': 4, '2': 5, '3': 6, '4': 7, '5': 8}
+INFO - 07/26/22 19:42:19 - 0:00:00 - Reloading modules from /public/home/pw/workspace/LearnLawsInMatrix/dumped/MIS_8_200000_SMD_256d/0zl038v6io/best-test_acc.pth ...
+DEBUG - 07/26/22 19:42:21 - 0:00:03 - TransformerModel(
+                                        (position_embeddings): Embedding(4096, 256)
+                                        (embeddings): Embedding(9, 256, padding_idx=1)
+                                        (layer_norm_emb): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        (attentions): ModuleList(
+                                          (0): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (1): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (2): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (3): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (4): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (5): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                        )
+                                        (layer_norm1): ModuleList(
+                                          (0): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (3): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (4): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (5): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        )
+                                        (ffns): ModuleList(
+                                          (0): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (1): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (2): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (3): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (4): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (5): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                        )
+                                        (layer_norm2): ModuleList(
+                                          (0): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (3): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (4): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (5): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        )
+                                      ): TransformerModel(
+                                        (position_embeddings): Embedding(4096, 256)
+                                        (embeddings): Embedding(9, 256, padding_idx=1)
+                                        (layer_norm_emb): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        (attentions): ModuleList(
+                                          (0): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (1): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (2): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (3): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (4): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (5): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                        )
+                                        (layer_norm1): ModuleList(
+                                          (0): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (3): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (4): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (5): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        )
+                                        (ffns): ModuleList(
+                                          (0): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (1): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (2): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (3): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (4): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (5): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                        )
+                                        (layer_norm2): ModuleList(
+                                          (0): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (3): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (4): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (5): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        )
+                                      )
+DEBUG - 07/26/22 19:42:21 - 0:00:03 - TransformerModel(
+                                        (position_embeddings): Embedding(4096, 256)
+                                        (embeddings): Embedding(9, 256, padding_idx=1)
+                                        (layer_norm_emb): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        (attentions): ModuleList(
+                                          (0): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (1): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (2): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (3): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (4): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (5): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                        )
+                                        (layer_norm1): ModuleList(
+                                          (0): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (3): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (4): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (5): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        )
+                                        (ffns): ModuleList(
+                                          (0): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (1): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (2): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (3): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (4): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (5): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                        )
+                                        (layer_norm2): ModuleList(
+                                          (0): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (3): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (4): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (5): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        )
+                                        (layer_norm15): ModuleList(
+                                          (0): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (3): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (4): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (5): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        )
+                                        (encoder_attn): ModuleList(
+                                          (0): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (1): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (2): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (3): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (4): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (5): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                        )
+                                        (proj): Linear(in_features=256, out_features=9, bias=True)
+                                      ): TransformerModel(
+                                        (position_embeddings): Embedding(4096, 256)
+                                        (embeddings): Embedding(9, 256, padding_idx=1)
+                                        (layer_norm_emb): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        (attentions): ModuleList(
+                                          (0): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (1): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (2): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (3): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (4): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (5): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                        )
+                                        (layer_norm1): ModuleList(
+                                          (0): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (3): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (4): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (5): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        )
+                                        (ffns): ModuleList(
+                                          (0): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (1): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (2): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (3): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (4): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                          (5): TransformerFFN(
+                                            (lin1): Linear(in_features=256, out_features=1024, bias=True)
+                                            (lin2): Linear(in_features=1024, out_features=256, bias=True)
+                                          )
+                                        )
+                                        (layer_norm2): ModuleList(
+                                          (0): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (3): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (4): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (5): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        )
+                                        (layer_norm15): ModuleList(
+                                          (0): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (1): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (2): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (3): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (4): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                          (5): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+                                        )
+                                        (encoder_attn): ModuleList(
+                                          (0): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (1): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (2): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (3): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (4): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                          (5): MultiHeadAttention(
+                                            (q_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (k_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (v_lin): Linear(in_features=256, out_features=256, bias=True)
+                                            (out_lin): Linear(in_features=256, out_features=256, bias=True)
+                                          )
+                                        )
+                                        (proj): Linear(in_features=256, out_features=9, bias=True)
+                                      )
+INFO - 07/26/22 19:42:21 - 0:00:03 - Number of parameters (encoder): 5789952
+INFO - 07/26/22 19:42:21 - 0:00:03 - Number of parameters (decoder): 7372041
+INFO - 07/26/22 19:42:21 - 0:00:03 - Found 261 parameters in model.
+INFO - 07/26/22 19:42:21 - 0:00:03 - Loading data from /public/home/pw/workspace/LearnLawsInMatrix/dataset/eva/MIS/MIS_7_200000.test ...
+INFO - 07/26/22 19:42:22 - 0:00:03 - Loaded 80000 data from the disk.
+INFO - 07/26/22 19:42:37 - 0:00:19 - 79407/80000 (99.25875%) matrix were evaluated correctly.
+INFO - 07/26/22 19:42:38 - 0:00:19 - epoch -> 1.000000
+INFO - 07/26/22 19:42:38 - 0:00:19 - test_xe_loss -> 15.255401
+INFO - 07/26/22 19:42:38 - 0:00:19 - test_acc -> 99.258750
+INFO - 07/26/22 19:42:38 - 0:00:19 - __log__:{"epoch": 1, "test_xe_loss": 15.255400888061523, "test_acc": 99.25875}
